@@ -12,16 +12,20 @@
 
         <section class="formulario">
             <h3>Dados da Venda</h3>
-            <input type="text" id="inputNome" placeholder="Nome do cliente">
-            <input type="number" id="inputIdade" placeholder="Idade do cliente">
-            <input type="number" id="inputValor" placeholder="Valor Total (R$)">
+            <label for="inputNome">Nome do Cliente</label>
+            <input type="text" id="inputNome" placeholder="Nome do cliente" required autocomplete="name">
+            <label for= "inputIade">Idade</label>
+            <input type="number" id="inputIdade" placeholder="Idade do cliente" min ="0" required>
+            <label for="inputValor">Valor total</label>
+            <input type="number" id="inputValor" placeholder="Valor Total (R$)" min="0" stop="0.01" required>
 
+            <label for="inputCupom">Cupom</label>
             <select id="inputCupom">
                 <option value="false">Não possui cupom</option>
                 <option value="true">Possui cupom (15% OFF)</option>
             </select>
 
-            <button onclick="executarSistema()">Finalizar Venda</button>
+            <button id="btnFinalizar" onclick= "executarSistema()">Finalizar Venda</button>
         </section>
 
         <hr>
